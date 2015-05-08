@@ -1,0 +1,35 @@
+.content-panel {
+    height: 1%;
+    margin: 0 0 23px;
+    overflow: hidden;
+    background: white;
+    padding: 14px calc((100vw - 940px) / 2);
+    border-bottom: 1px solid #ecedf3;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
+    position: relative;
+    .page-title {
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        h2 {
+            float: left;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+        #breadcrumbs {
+            display: inline-block;
+            width: auto;
+            float: right;
+            font-size: 10px;
+            position: absolute;
+            right: calc((100vw - 940px) / 2);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+.page-content {
+    padding: 14px calc((100vw - 940px) / 2);
+}

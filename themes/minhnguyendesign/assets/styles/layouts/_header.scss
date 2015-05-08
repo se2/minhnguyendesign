@@ -1,0 +1,125 @@
+header {
+    .container {
+        .section {
+            max-width: 940px;
+            margin: 0 auto;
+            padding: 41px 10px 39px;
+            overflow: hidden;
+            border-top: 2px solid #726565;
+        }
+        .logo {
+            background: url(../images/logo.png) no-repeat;
+            width: 166px;
+            height: 113px;
+            overflow: hidden;
+            text-indent: -9999px;
+            margin-left: auto;
+            margin-right: auto;
+            background-size: cover;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .contact-box {
+            float: right;
+            padding: 1px 0 0;
+            .social {
+                float: left;
+                padding: 0 0 0 4px;
+                margin-bottom: 0;
+                li {
+                    float: left;
+                    margin: 0 0 0 5px;
+                }
+                a {
+                    float: left;
+                    width: 24px;
+                    height: 25px;
+                    overflow: hidden;
+                    text-indent: -9999px;
+                }
+                .twitter {
+                    background: url(../images/twitter.png) no-repeat;
+                    &:hover {
+                        background: url(../images/twitter-hover.png) no-repeat;
+                    }
+                }
+                .facebook {
+                    background: url(../images/facebook.png) no-repeat;
+                    &:hover {
+                        background: url(../images/facebook-hover.png) no-repeat;
+                    }
+                }
+                .rss {
+                    background: url(../images/rss.png) no-repeat;
+                    &:hover {
+                        background: url(../images/rss-hover.png) no-repeat;
+                    }
+                }
+            }
+        }
+        .nav-box {
+            background: #343434;
+            border-bottom: 2px solid #584D4D;
+            padding: 18px 0 0;
+            text-transform: uppercase;
+            z-index: 1;
+            &:active {
+                outline: 0;
+            }
+            a {
+                color: #8c8c8c;
+                text-decoration: none;
+                margin: 0;
+                padding: 0;
+                &:hover {
+                    background-color: transparent;
+                    color: #ccc !important;
+                    transition: all 500ms ease;
+                }
+            }
+            ul {
+                margin: 0 auto;
+                max-width: 940px;
+                padding: 0 10px;
+                font: 300 14px/21px 'Oswald', Arial, Helvetica, sans-serif;
+                li {
+                    float: left;
+                    position: relative;
+                    padding: 0 23px 19px;
+                    background: url(../images/separator.png) no-repeat 0 4px;
+                    &:first-child {
+                        background: none;
+                        padding-left: 3px;
+                    }
+                    &.active {
+                        a {
+                            text-decoration: none;
+                            color: #fffefe;
+                            transition: 300ms all linear;
+                            -o-transition: 300ms all linear;
+                            -moz-transition: 300ms all linear;
+                            -webkit-transition: 300ms all linear;
+                        }
+                    }
+                }
+            }
+            .contact-box {
+                float: right;
+                padding: 1px 0 0;
+                .phone {
+                    text-decoration: none;
+                    color: #FFF;
+                    float: left;
+                    font: 300 14px/21px "Oswald", Arial, Helvetica, sans-serif;
+                    background: url(../images/ico-phone.png) no-repeat 0 4px;
+                    padding: 1px 0 0 25px;
+                }
+            }
+        }
+        #menu-primary-navigation {
+            li {
+                display: inline-block;
+            }
+        }
+    }
+}

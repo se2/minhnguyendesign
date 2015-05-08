@@ -1,0 +1,57 @@
+body {
+    font: 13px/21px Arial, Helvetica, sans-serif;
+    color: #666;
+    min-width: 320px;
+    background: #fbfbfb;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    transition: all 500ms;
+    &:hover {
+        color: grey;
+        text-decoration: none;
+    }
+}
+
+h2 {
+    color: #222;
+    font: 300 24px/36px 'Oswald', Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+h3 {
+    color: #222;
+    font: 300 18px/28px 'Oswald', Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+.no-overflow {
+    overflow: hidden;
+}
+
+.main {
+    width: 100% !important;
+}
+
+.container {
+    width: 100%;
+    padding: 0;
+}
+
+.sidebar {
+    display: none;
+}
+
+.content {
+    margin: 0 auto;
+    .main {
+        padding: 0 !important;
+    }
+}

@@ -1,0 +1,13 @@
+.contact {
+    .page-content {
+        padding: 0 calc((100vw - 940px) / 2);
+        .contact-map {
+            width: 600px;
+            height: 450px;
+            display: inline-block;
+            .meta {
+                padding: 0 0 10px;
+            }
+        }
+    }
+}
