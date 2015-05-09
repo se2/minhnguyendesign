@@ -1,12 +1,150 @@
 .contact {
+    #gmap_canvas img {
+        max-width: none!important;
+        background: none!important;
+    }
     .page-content {
         padding: 0 calc((100vw - 940px) / 2);
         .contact-map {
             width: 600px;
-            height: 450px;
+            height: 888px;
             display: inline-block;
             .meta {
                 padding: 0 0 10px;
+            }
+        }
+        #gform_confirmation_wrapper_1 {
+            #gform_confirmation_message_1 {
+                font-size: 20px;
+                text-align: center;
+                margin-top: 40px;
+            }
+        }
+        #sidebar {
+            float: right;
+            width: 285px;
+            padding: 0 0 0 14px;
+            margin: 3px 0px 0 -325px;
+            .widget {
+                width: 100%;
+                padding: 0 0 6px;
+                h3 {
+                    padding: 0 0 7px;
+                    margin: 0 0 14px;
+                    border-bottom: 1px solid #e4e4e4;
+                }
+                dl {
+                    overflow: hidden;
+                    margin: 0 0 18px;
+                    dt {
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 13px;
+                        font-stretch: normal;
+                        font-style: normal;
+                        font-variant: normal;
+                        font-weight: normal;
+                        float: left;
+                        clear: left;
+                        margin: 0 3px 0 0;
+                    }
+                }
+            }
+        }
+        .gform_wrapper {
+            #gform_1 {
+                width: 620px;
+                .gform_heading {
+                    padding: 0 0 10px;
+                    .gform_title {
+                        color: #222;
+                        font: 300 18px/28px 'Oswald', Arial, Helvetica, sans-serif;
+                        margin: 0;
+                    }
+                    .gform_body {
+                        width: 100%;
+                        padding: 0 0 20px;
+                        overflow: hidden;
+                    }
+                }
+            }
+            .top_label {
+                .gfield_label {
+                    float: left;
+                    width: 130px;
+                    text-align: right;
+                    margin: 5px 30px 0 0;
+                    font-size: 13px;
+                    font-weight: normal !important;
+                }
+                input.medium {
+                    float: left;
+                    width: 460px;
+                    padding: 7px 0 8px;
+                    font-size: 12px;
+                    line-height: 18px;
+                    margin: 0;
+                    outline: none;
+                    border-radius: 0 !important;
+                    font: 100% arial, sans-serif;
+                    vertical-align: middle;
+                    color: #666;
+                    margin-bottom: 20px;
+                    &:focus {
+                        background-image: none !important;
+                    }
+                }
+            }
+            textarea.medium {
+                resize: none;
+                height: 148px;
+                overflow: auto;
+                width: 460px;
+                float: left;
+                padding: 7px;
+                font-size: 12px;
+                line-height: 18px;
+                color: #666;
+                border-color: rgb(238, 238, 238);
+                &:focus {
+                    background-image: none !important;
+                }
+            }
+            .gform_footer {
+                input[type=submit] {
+                    float: left;
+                    position: relative;
+                    font: 300 14px/16px 'Oswald', Arial, Helvetica, sans-serif !important;
+                    text-shadow: 1px 1px 0 rgba(0, 0, 0, .1) !important;
+                    text-transform: none !important;
+                    padding: 6px 16px 7px !important;
+                    margin: 0 0 0 160px;
+                    border-radius: 2px;
+                    display: inline-block;
+                    vertical-align: top;
+                    color: #fff;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    border: 1px solid #ff350e;
+                    background: linear-gradient(to bottom, #ff6042 0%, #ff5230 100%);
+                }
+            }
+            div.validation_error {
+                // width: 100%;
+                display: none;
+            }
+            li.gfield_error {
+                width: 100%;
+                input.medium, textarea.medium {
+                    width: 444px !important;
+                    margin-bottom: 0;
+                }
+                textarea.medium {
+                    height: 55px;
+                }
+                .validation_message {
+                    padding-left: 160px !important;
+                    padding-right: 0 !important;
+                }
             }
         }
     }

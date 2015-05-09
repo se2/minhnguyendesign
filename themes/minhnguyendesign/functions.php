@@ -19,7 +19,9 @@ $sage_includes = [
   'lib/titles.php',                   // Page titles
   'lib/extras.php',                   // Custom functions
   'lib/custom/custom_post_types.php', // Custom Post Types
-  'lib/acf/contact-page.php',         // ACF
+  'lib/acf/contact-page.php',         // ACF for Contact Page
+  'lib/acf/members-info.php',         // ACF for Members
+  'lib/acf/projects-info.php',        // ACF for Projects
 ];
 
 foreach ($sage_includes as $file) {
@@ -39,4 +41,17 @@ function special_nav_class($classes, $item) {
     }
     return $classes;
 }
+
+function change_default_title_project( $title ){
+
+    $screen = get_current_screen();
+
+    if ( 'members' == $screen->post_type ){
+        $title = 'Member name';
+    }
+
+    return $title;
+}
+
+add_filter( 'enter_title_here', 'change_default_title_project' );
 

@@ -165,7 +165,7 @@ class GF_Field_CAPTCHA extends GF_Field {
 					$options   = "<script type='text/javascript'>" . apply_filters( 'gform_cdata_open', '' ) . " var RecaptchaOptions = {theme : '$theme'}; if(parseInt('{$tabindex}') > 0) {RecaptchaOptions.tabindex = {$tabindex2};}" .
 					             apply_filters( 'gform_recaptcha_init_script', '', $form_id, $this ) . apply_filters( 'gform_cdata_close', '' ) . '</script>';
 
-					$is_ssl = ! empty( $_SERVER['HTTPS'] );
+					$is_ssl = is_ssl();
 
 					return $options . "<div class='ginput_container' id='$field_id'>" . recaptcha_get_html( $publickey, null, $is_ssl, $language ) . '</div>';
 				}

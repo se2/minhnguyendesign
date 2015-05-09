@@ -9,20 +9,14 @@
   $content = apply_filters('the_content', $page->post_content);
   echo $content;
 ?>
+  <div class="contact-map">
   <?php if ( get_field( 'map' ) ) : ?>
   <?php $map = get_field( 'map' ); ?>
-  <div class="contact-map">
     <div class="meta">
         <h3>Find us on map</h3>
     </div>
     <div style="overflow:hidden;height:450px;width:600px;">
         <div id="gmap_canvas" style="height:450px;width:600px;"></div>
-        <style>
-        #gmap_canvas img {
-            max-width: none!important;
-            background: none!important;
-        }
-        </style>
     </div>
     <script type="text/javascript">
     function init_map() {
@@ -46,7 +40,68 @@
     }
     google.maps.event.addDomListener(window, 'load', init_map);
     </script>
-  </div>
   <?php endif; ?>
-
+  <?php
+    // gravity_form( $id_or_title, $display_title = true, $display_description = true, $display_inactive = false, $field_values = null, $ajax = false, $tabindex );
+    gravity_form(
+      1,
+      true,
+      true,
+      false,
+      null,
+      true);
+  ?>
+  </div>
+  <aside id="sidebar" class="same-height-right" style="height: 888px;">
+      <!-- widget -->
+      <div class="widget">
+          <h3>Keep in touch with us</h3>
+          <h5>You can find MINH NGUYEN DESIGN on our new address.</h5>
+          <br>
+          <dl>
+              <?php if (get_field('name')) : ?>
+              <dt>Name: </dt><dd><span id="name_u"><?php echo get_field('name'); ?></span><br></dd>
+              <?php endif; ?>
+              <?php if (get_field('address')) : ?>
+              <dt>Address: </dt><dd><span id="address"><?php echo get_field('address'); ?></span><br></dd>
+              <?php endif; ?>
+              <?php if (get_field('phone')) : ?>
+              <dt>Phone: </dt>
+              <dd>
+                <span id="phone_u">
+              <?php
+                foreach (get_field('phone') as $key => $number) {
+                  echo $number['number'];
+                  if (($key + 1) < sizeof(get_field('phone'))) {
+                    echo ' - ';
+                  }
+                }
+              ?>
+                </span><br>
+              </dd>
+              <?php endif; ?>
+              <?php if (get_field('fax')) : ?>
+              <dt>Fax: </dt>
+              <dd>
+                <span id="fax_u">
+              <?php
+                foreach (get_field('fax') as $key => $number) {
+                  echo $number['number'];
+                  if (($key + 1) < sizeof(get_field('fax'))) {
+                    echo ' - ';
+                  }
+                }
+              ?>
+                </span><br>
+              </dd>
+              <?php endif; ?>
+              <?php if (get_field('email')) : ?>
+              <dt>Email: </dt><dd><span id="mail"><a href="mailto:<?php echo get_field('email'); ?>"><?php echo get_field('email'); ?></a></span><br></dd>
+              <?php endif; ?>
+              <?php if (get_field('website')) : ?>
+              <dt>Website: </dt><dd><span id="web"><a href="<?php echo get_field('website') ?>"><?php echo get_field('website'); ?></a></span></dd>
+              <?php endif; ?>
+          </dl>
+      </div>
+  </aside>
 </div>
