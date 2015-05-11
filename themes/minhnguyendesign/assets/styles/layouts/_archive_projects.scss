@@ -1,0 +1,87 @@
+.post-type-archive-projects {
+    .type-box {
+        height: 1%;
+        padding: 0 17px 26px 0;
+        overflow: hidden;
+        font: 300 14px/21px "Oswald", Arial, Helvetica, sans-serif;
+        color: #222;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        ul {
+            float: left;
+            padding-left: 0;
+            li {
+                float: left;
+                padding: 0 10px;
+                border-left: 1px solid #e4e4e4;
+                &:first-child {
+                    border: 0;
+                }
+            }
+        }
+    }
+    .holder {
+        max-width: 940px;
+        margin: 0 auto;
+    }
+    #projects-wrapper {
+        width: 940px;
+        margin: 0 auto;
+        // min-height: 250px;
+        .project-element {
+            padding: 0;
+            text-align: center;
+            float: left;
+            margin: 0 13px 33px 0;
+            overflow: visible;
+            position: relative;
+            width: 300px;
+            height: 250px;
+            h5 {
+                margin-bottom: 0;
+                a {
+                    color: #222;
+                    font: italic 600 14px/18px 'Open Sans', Arial, Helvetica, sans-serif;
+                }
+            }
+            .image {
+                display: block;
+                padding: 7px;
+                position: relative;
+                border: 1px solid #f1f1f1;
+                text-align: left;
+                .mask {
+                    background: rgba(255, 255, 255, 0.4);
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    width: 100%;
+                    height: 100%;
+                    display: none;
+                }
+                .btn-photo {
+                    background: url(../images/zoom.png) no-repeat;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    overflow: hidden;
+                    text-indent: -9999px;
+                    width: 47px;
+                    margin: -24px 0 0 -23px;
+                    height: 47px;
+                    display: none;
+                }
+                &:hover {
+                    .mask {
+                        display: block;
+                    }
+                    .btn-photo {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

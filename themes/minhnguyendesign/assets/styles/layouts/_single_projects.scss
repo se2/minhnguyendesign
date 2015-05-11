@@ -1,0 +1,52 @@
+.single-projects {
+    .holder {
+        width: 940px;
+        margin: 0 auto;
+        padding: 0 0 0;
+        .portfolio-box {
+            overflow: hidden;
+            padding: 0 0 28px;
+            margin: 0 0 11px;
+            border-bottom: 1px solid #e4e4e4;
+            .image {
+                float: left;
+                margin: 3px 20px 0 0;
+                display: block;
+                padding: 7px;
+                position: relative;
+                border: 1px solid #f1f1f1;
+                text-align: left;
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
+                .mask {
+                    background: rgba(255, 255, 255, 0.6);
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    width: 100%;
+                    height: 100%;
+                    display: none;
+                }
+                .btn-photo {
+                    background: url(../images/zoom.png) no-repeat;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    overflow: hidden;
+                    text-indent: -9999px;
+                    width: 47px;
+                    margin: -24px 0 0 -23px;
+                    height: 47px;
+                    display: none;
+                }
+                &:hover {
+                    .mask, .btn-photo {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

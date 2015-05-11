@@ -8,6 +8,8 @@
             <?php if (has_post_thumbnail()) : ?>
             <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
             <img src="<?php echo $image[0]; ?>" alt="" width="220px" height="303px">
+            <?php else: ?>
+            <img src="<?php bloginfo('template_url'); ?>/assets/images/member-default.png" alt="" width="100%" height="303px">
             <?php endif; ?>
             <span class="mask"></span>
           </span>
