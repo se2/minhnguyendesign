@@ -35,9 +35,11 @@
       <span class="image">
         <?php if (has_post_thumbnail()) : ?>
         <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
-        <img style="width: 283px; height: 189px" src="<?php echo $image[0]; ?>" alt="">
+        <!-- <img style="width: 283px; height: 189px" src="<?php // echo $image[0]; ?>" alt=""> -->
+        <div style="width:283px;height:189px;background:url('<?php echo $image[0]; ?>');background-size:cover;background-position:center;"></div>
         <?php else: ?>
-        <img style="width: 283px; height: 189px" src="<?php bloginfo('template_url'); ?>/assets/images/logo.png" alt="">
+        <div style="width:283px;height:189px;background:url('<?php bloginfo('template_url'); ?>/assets/images/logo.png');background-size:cover;background-position:center;"></div>
+        <!-- <img style="width: 283px; height: 189px" src="<?php // bloginfo('template_url'); ?>/assets/images/logo.png" alt=""> -->
         <?php endif; ?>
         <span class="mask"></span>
         <a href="<?php the_permalink(); ?>" class="btn-photo">photo</a>
