@@ -25,8 +25,8 @@
                 // JavaScript to be fired on all pages
             },
             addPhoneNav: function() {
-                $('#menu-primary-navigation').append('<div class="contact-box"><strong class="phone"><span id="phone">08387508721 - 0979869226</span></strong></div>');
-                $('#menu-primary-navigation-1').append('<div class="by"><span id="copyright">© Copyright 2014, Minh Nguyen Design Co .ltd Vietnam.</span></div>');
+                // $('#menu-primary-navigation').append('<div class="contact-box"><strong class="phone"><span id="phone">08387508721 - 0979869226</span></strong></div>');
+                // $('#menu-primary-navigation-1').append('<div class="by"><span id="copyright">© Copyright 2014, Minh Nguyen Design Co .ltd Vietnam.</span></div>');
             },
             processIsotope: function() {
                 console.log('isotope');
@@ -110,8 +110,16 @@
         'home': {
             init: function() {
                 // JavaScript to be fired on the home page
-                $('body').addClass('no-overflow');
-                $('footer').attr('style', 'bottom:0;');
+                // $('body').addClass('no-overflow');
+                $('.home-slider-wrapper').slick({
+                    arrows: true,
+                    dots: false,
+                    fade: true,
+                    speed: 600,
+                    infinite: true,
+                    autoplay: true,
+                    autoplaySpeed: 5000
+                });
             },
             finalize: function() {
                 // JavaScript to be fired on the home page, after the init JS

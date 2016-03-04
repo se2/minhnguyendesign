@@ -1,9 +1,19 @@
 header {
+    .menu-wrapper {
+        background: #343434;
+    }
+    .menu-wrapper__inner {
+        max-width: 940px;
+        margin: 0 auto;
+    }
     .container {
         .section {
             max-width: 940px;
             margin: 0 auto;
-            padding: 41px 10px 39px;
+            padding: 37px 10px 35px;
+            @media (max-width: break($s)) {
+                padding: 30px 10px 15px;
+            }
             overflow: hidden;
             border-top: 2px solid #726565;
         }
@@ -18,6 +28,10 @@ header {
             background-size: cover;
             margin-top: 0;
             margin-bottom: 0;
+            @media (max-width: break($s)) {
+                width: 120px;
+                height: 81px;
+            }
         }
         .contact-box {
             float: right;
@@ -76,6 +90,9 @@ header {
                     color: #ccc !important;
                     transition: all 500ms ease;
                 }
+                @media (max-width: break($xs)) {
+                    font-size: 13px;
+                }
             }
             ul {
                 margin: 0 auto;
@@ -101,11 +118,18 @@ header {
                             -webkit-transition: 300ms all linear;
                         }
                     }
+                    @media (max-width: break($s)) {
+                        padding: 0 13px 15px;
+                    }
+                    @media (max-width: break($xs)) {
+                        padding: 0 7px 15px;
+                    }
                 }
             }
             .contact-box {
                 float: right;
-                padding: 1px 0 0;
+                padding-right: 10px;
+                display: inline-block;
                 .phone {
                     text-decoration: none;
                     color: #FFF;
@@ -114,7 +138,17 @@ header {
                     background: url(../images/ico-phone.png) no-repeat 0 4px;
                     padding: 1px 0 0 25px;
                 }
+                @media (max-width: break($s)) {
+                    float: none;
+                    padding-right: 0;
+                }
             }
+            @media (max-width: break($s)) {
+                text-align: center;
+            }
+        }
+        .menu-primary-navigation-container {
+            display: inline-block;
         }
         #menu-primary-navigation {
             li {

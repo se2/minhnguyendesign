@@ -13,12 +13,23 @@
           </ul>
       </div>
     </div>
-    <nav role="navigation" class="nav-box">
-      <?php
-      if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
-      endif;
-      ?>
-    </nav>
+    <div class="menu-wrapper">
+      <div class="menu-wrapper__inner">
+        <nav role="navigation" class="nav-box">
+          <?php
+          if (has_nav_menu('primary_navigation')) :
+            wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
+          endif;
+          ?>
+          <div class="contact-box">
+            <strong class="phone">
+              <span id="phone">
+                <a href="tel:08387508721">08387508721</a> - <a href="tel:0979869226">0979869226</a>
+              </span>
+            </strong>
+          </div>
+        </nav>
+      </div>
+    </div>
   </div>
 </header>

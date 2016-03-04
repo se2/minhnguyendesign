@@ -1,4 +1,9 @@
-#rev_slider_1_1 {
-    max-height: 100vh !important;
-    height: calc(100vh - 341px) !important;
+.home-slider-wrapper {
+	.img {
+		width: 100%;
+		height: calc(100vh - 316px - 60px);
+		@media (max-width: break($s)) {
+			height: calc(100vh - 246px);
+		}
+	}
 }
