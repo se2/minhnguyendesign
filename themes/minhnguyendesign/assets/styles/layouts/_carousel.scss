@@ -1,9 +1,12 @@
+.slick-slider {
+	margin-bottom: 0;
+}
 .home-slider-wrapper {
 	.img {
 		width: 100%;
 		height: calc(100vh - 316px - 60px);
 		@media (max-width: break($s)) {
-			height: calc(100vh - 246px);
+			height: calc(100vh - 246px - 105px);
 		}
 	}
 }
